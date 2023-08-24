@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecoracionesJo</title>
+   
+    <script src="https://unpkg.com/axios@1.3.0/dist/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./csss/main.css">
+    
+    <!-- <script src="js/main.js"></script> -->
+    
+    <style>
+      .producto-imagen {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .producto-imagen:hover {opacity: 0.7;}
+
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+      }
+
+      /* Modal Content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      /* Caption of Modal Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+
+      /* Add Animation */
+      .modal-content, #caption {  
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+      }
+
+      @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+      }
+
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+      }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="wrapper"> <!-- contenedor -->
+        <header class="header-mobile">
+            <h1 class="logo">DecoracionesJo</h1>
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
+        
+        <aside> <!-- js le añade class aside-visible cuando se preciona el boton. ver menu.js-->
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
+            <header>
+                <h1 class="logo">Bienvenido</h1>
+            </header>
+            <nav>
+                <ul class="menu">
+                    
+                    <li>
+                        <button id="productos listos para la entrega" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb"></i> Productos listos para la entrega</button>
+                    </li>
+                    <li>
+                        <button id="productos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Productos</button>
+                    </li>
+                    <li>
+                      <button id="insumos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Insumos</button>
+                  </li>
+                    <li>
+                        <button id="todos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb-fill"></i>
+                             Todos los productos</button>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito" href="./carrito.php">
+                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <footer>
+                <p class="texto-footer">© 2023 DecoracionesJo </p>
+            </footer>
+        
+        </aside>
+        
+        <main><!-- contenedor de los productos-->
+            <h2  class="titulo-principal" id="titulo-principal">Productos listos para la entrega</h2>
+            <div id="contenedor-productos" class="contenedor-productos">
+                <!-- Esto se va a rellenar con JS -->
+                
+            </div>
+        </main>
+        
+    </div>
+  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/menu.js"></script>
+
+    <script>
+        
+    </script>
+    
+
+</body>
+</html>
