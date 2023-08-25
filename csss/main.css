@@ -159,7 +159,11 @@ main {
 }
 
 .producto-imagen {
-    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
     border-radius: 1rem;
 }
 
