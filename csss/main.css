@@ -55,9 +55,14 @@ aside {
     justify-content: space-between;/*los 3 utlimos hace q se vean separados en forma de columna */
 }
 
+.cajaDeRedes a{
+    color:#ededede6;
+
+}
 .logo {
     font-weight: 400;
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .menu {
@@ -75,6 +80,7 @@ aside {
     display: flex;
     align-items: center;
     gap: 1rem;
+    text-align: left;/*de no ponerlo el texto tiene vida propia*/
     font-weight: 600;
     padding: 1rem;
     font-size: .85rem;
@@ -134,8 +140,12 @@ aside {
     color: var(--clr-white);
 }
 
+footer {
+text-align: center;
+}
+
 .texto-footer {
-    color: var(--clr-main-light);
+    color: #e2e2e230;
     font-size: .85rem;
 }
 
@@ -157,13 +167,11 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
-
 .producto-imagen {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
-    border-radius: 1rem;
     border-radius: 1rem;
 }
 
